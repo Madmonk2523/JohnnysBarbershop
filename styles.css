@@ -1,36 +1,217 @@
-body {
-    font-family: Arial, sans-serif;
+* {
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Georgia', serif;
+    background-color: #1a1a1a;
+    color: #333;
+    line-height: 1.6;
 }
 
 header {
-    text-align: center;
-    padding: 20px;
-    color: white;
+    position: relative;
+    height: 500px;
+    overflow: hidden;
 }
 
 .background {
     width: 100%;
-    height: auto;
-    position: relative;
-    z-index: -1;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+header h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 4rem;
+    color: white;
+    text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.7);
+    font-family: 'Georgia', serif;
+    font-style: italic;
+    letter-spacing: 2px;
 }
 
 main {
-    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
 }
 
-.reviews, .services, .contact, .menu {
+section {
     background: white;
+    border-radius: 12px;
+    padding: 40px;
+    margin: 30px 0;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+}
+
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: #2c3e50;
+    border-bottom: 3px solid #8b4513;
+    padding-bottom: 15px;
+    font-family: 'Georgia', serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+h3 {
+    font-size: 1.5rem;
+    color: #34495e;
+    margin-top: 20px;
+    margin-bottom: 15px;
+    font-family: 'Georgia', serif;
+}
+
+/* Reviews Section */
+.reviews {
+    background: linear-gradient(135deg, #f5f5f5 0%, #ffffff 100%);
+}
+
+.review {
+    background: white;
+    padding: 20px;
+    margin: 15px 0;
+    border-left: 5px solid #8b4513;
     border-radius: 8px;
-    padding: 15px;
-    margin: 10px 0;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+
+.review:hover {
+    background: #fafafa;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.review p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #2c3e50;
+}
+
+.review strong {
+    color: #8b4513;
+    font-weight: 600;
+}
+
+/* Services Section */
+.services {
+    background: linear-gradient(135deg, #faf3ee 0%, #ffffff 100%);
+}
+
+.services ul {
+    list-style: none;
+}
+
+.services li {
+    padding: 15px 0;
+    font-size: 1.3rem;
+    color: #2c3e50;
+    border-bottom: 1px solid #e0e0e0;
+    padding-left: 30px;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.services li:last-child {
+    border-bottom: none;
+}
+
+.services li:before {
+    content: "✂";
+    position: absolute;
+    left: 0;
+    color: #8b4513;
+    font-size: 1.5rem;
+}
+
+.services li:hover {
+    color: #8b4513;
+    transform: translateX(10px);
+}
+
+/* Contact Section */
+.contact {
+    background: linear-gradient(135deg, #f5f5f5 0%, #ffffff 100%);
+}
+
+.contact p {
+    font-size: 1.1rem;
+    margin: 12px 0;
+    color: #2c3e50;
+    padding: 8px 0;
+}
+
+.contact h3 {
+    color: #8b4513;
+}
+
+/* Menu Section */
+.menu {
+    background: linear-gradient(135deg, #faf3ee 0%, #ffffff 100%);
+    text-align: center;
 }
 
 .menu-image {
     width: 100%;
+    max-width: 600px;
     height: auto;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    margin: 20px auto;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.menu-image:hover {
+    transform: scale(1.02);
+}
+
+/* Footer */
+footer {
+    background: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+    margin-top: 40px;
+    font-size: 1rem;
+    border-top: 5px solid #8b4513;
+}
+
+footer p {
+    max-width: 800px;
+    margin: 0 auto;
+    font-style: italic;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2.5rem;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+    }
+
+    section {
+        padding: 25px;
+        margin: 20px 0;
+    }
+
+    main {
+        padding: 20px 15px;
+    }
 }

@@ -357,11 +357,14 @@ p { font-size: 1rem; color: var(--gray-text); line-height: 1.8; }
 }
 
 .menu-image {
-    max-width: 100%;
+    max-width: 800px;
+    width: 90%;
     height: auto;
     border-radius: 12px;
     box-shadow: var(--shadow-lg);
     animation: fadeInUp 0.8s ease-out;
+    display: block;
+    margin: 0 auto;
 }
 
 .service-card {
@@ -773,6 +776,11 @@ p { font-size: 1rem; color: var(--gray-text); line-height: 1.8; }
     .info-block,
     .why-card {
         padding: 25px 15px;
+    }
+    
+    .menu-image {
+        width: 90%;
+        max-width: 600px;
     }
     
     .menu-image {
@@ -2237,6 +2245,11 @@ a {
     
     .about-text {
         padding: 20px 15px;
+    }
+    
+    .menu-image {
+        width: 95%;
+        max-width: 450px;
     }
 }
 }

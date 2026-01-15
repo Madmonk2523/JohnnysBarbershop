@@ -334,6 +334,21 @@ p { font-size: 1rem; color: var(--gray-text); line-height: 1.8; }
     gap: 30px;
 }
 
+.menu-image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+}
+
+.menu-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: var(--shadow-lg);
+    animation: fadeInUp 0.8s ease-out;
+}
+
 .service-card {
     background: rgba(255, 255, 255, 0.92);
     border-radius: 12px;
@@ -562,13 +577,13 @@ p { font-size: 1rem; color: var(--gray-text); line-height: 1.8; }
 }
 
 .footer-section h4 {
-    color: var(--accent);
+    color: var(--secondary);
     margin-bottom: 15px;
     font-size: 1rem;
 }
 
 .footer-section p {
-    color: #ddd;
+    color: #000;
     font-size: 0.9rem;
 }
 
@@ -581,7 +596,7 @@ p { font-size: 1rem; color: var(--gray-text); line-height: 1.8; }
 }
 
 .footer-section ul li a {
-    color: #ddd;
+    color: #000;
     transition: var(--transition);
 }
 
@@ -593,8 +608,8 @@ p { font-size: 1rem; color: var(--gray-text); line-height: 1.8; }
 .footer-bottom {
     text-align: center;
     padding-top: 20px;
-    border-top: 1px solid rgba(255,255,255,0.2);
-    color: #bbb;
+    border-top: 1px solid rgba(0,0,0,0.2);
+    color: #000;
     font-size: 0.85rem;
 }
 

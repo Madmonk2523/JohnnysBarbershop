@@ -46,16 +46,7 @@ function initMobileMenu() {
 
 // Form Handling
 function initFormHandling() {
-    // Booking Form
-    const bookingForm = document.getElementById('bookingForm');
-    if (bookingForm) {
-        bookingForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            handleBookingSubmit(this);
-        });
-    }
-
-    // Contact Form
+    // Contact Form only - removed booking form
     const contactForm = document.getElementById('contactForm');
     if (contactForm) {
         contactForm.addEventListener('submit', function(e) {
@@ -63,58 +54,6 @@ function initFormHandling() {
             handleContactSubmit(this);
         });
     }
-
-    // Set minimum date to today
-    const dateInput = document.getElementById('date');
-    if (dateInput) {
-        const today = new Date().toISOString().split('T')[0];
-        dateInput.setAttribute('min', today);
-    }
-}
-
-// Booking Form Submission
-function handleBookingSubmit(form) {
-    const formData = new FormData(form);
-    const data = {
-        name: formData.get('name'),
-        email: formData.get('email'),
-        phone: formData.get('phone'),
-        date: formData.get('date'),
-        time: formData.get('time'),
-        barber: formData.get('barber'),
-        service: formData.get('service'),
-        notes: formData.get('notes')
-    };
-
-    // Validate form
-    if (!data.name || !data.email || !data.phone || !data.date || !data.time || !data.service) {
-        showNotification('Please fill in all required fields.', 'error');
-        return;
-    }
-
-    // Validate email
-    if (!isValidEmail(data.email)) {
-        showNotification('Please enter a valid email address.', 'error');
-        return;
-    }
-
-    // Validate phone
-    if (!isValidPhone(data.phone)) {
-        showNotification('Please enter a valid phone number.', 'error');
-        return;
-    }
-
-    // Show success message
-    showNotification(
-        `Thank you, ${data.name}! Your appointment is confirmed for ${data.date} at ${data.time}. We'll send a confirmation to ${data.email}.`,
-        'success'
-    );
-
-    // Reset form
-    form.reset();
-
-    // Log booking data (in real app, send to server)
-    console.log('Booking Data:', data);
 }
 
 // Contact Form Submission

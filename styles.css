@@ -173,21 +173,18 @@ a {
 
 .logo a {
     font-family: 'Playfair Display', serif;
-    font-size: 1.6rem;
-    font-weight: 900;
-    color: var(--white);
-    letter-spacing: 2px;
-    text-transform: uppercase;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--accent-color);
+    display: flex;
+    align-items: center;
+    gap: 8px;
     transition: var(--transition);
-    background: linear-gradient(135deg, var(--accent-color), var(--accent-light));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    text-shadow: 0 0 30px rgba(212, 165, 116, 0.6);
-    filter: brightness(1.1
+}
 
 .logo a:hover {
-    color: var(--accent-color);
-    text-shadow: 0 0 20px rgba(212, 165, 116, 0.5);
+    color: var(--accent-light);
+    text-shadow: 0 0 15px rgba(212, 165, 116, 0.5);
 }
 
 .nav-menu {
@@ -1279,8 +1276,6 @@ a {
     z-index: 1;
     font-size: 1.4rem;
 }
-    position: relative;
-    z-index: 1;
 
 .contact-card p {
     line-height: 1.8;

@@ -3,76 +3,209 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Johnny's Barbershop</title>
+    <title>Johnny's Barbershop | Classic Cuts & Professional Service</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Raleway:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <h1>Welcome to Johnny's Barbershop</h1>
-        <img src="backround.webp" alt="Barbershop Background" class="background">
-    </header>
-    <main>
-        <!-- About Section -->
-        <section class="about">
-            <h2>About Us</h2>
-            <p>Kids-friendly, sunlit barber's shop specializing in classic cuts and shaves for adults and kids. We pride ourselves on providing exceptional service with a personal touch that keeps customers coming back.</p>
-        </section>
-
-        <!-- Reviews Section -->
-        <section class="reviews">
-            <h2>What Our Customers Say</h2>
-            <div class="review">
-                <p><strong>Seann Sackett:</strong> Steve is an excellent barber. Gives exceptional service and a really nice guy. Highly recommend.</p>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <a href="index.html">✂ Johnny's Barbershop</a>
             </div>
-            <div class="review">
-                <p><strong>Patrick Richardson:</strong> This is a perfect old school barber shop. Simon is a master of his craft, a real artist. Fair prices and great cuts.</p>
-            </div>
-            <div class="review">
-                <p><strong>Hector The Great:</strong> Prompt and professional, Zach is knowledgeable and skilled at getting my best haircut. Glad doors kept open until posted closing time to accommodate busy schedule.</p>
-            </div>
-            <div class="review">
-                <p><strong>Paul Deraval:</strong> Simon is a gem. Such a terrific person who takes his time to do your hair right. Meticulous in every way and great conversations.</p>
-            </div>
-            <div class="review">
-                <p><strong>Michael Anthony:</strong> Simon is Number 1! He's an old school barber you don't find anymore. He's focused, consistent, and truly talented.</p>
-            </div>
-            <div class="review">
-                <p><strong>Scott Brekne:</strong> Love visiting Steve and Simon for a haircut! They are meticulous with their cuts. Great atmosphere in the shop and always fun chatting with them.</p>
-            </div>
-        </section>
-
-        <!-- Services Section -->
-        <section class="services">
-            <h2>Our Services</h2>
-            <ul>
-                <li>Haircut</li>
-                <li>Beard Trim</li>
-                <li>Classic Shaves</li>
-                <li>Hot Towel Service</li>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link active">Home</a></li>
+                <li><a href="services.html" class="nav-link">Services</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="booking.html" class="nav-link cta-btn">Book Now</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
             </ul>
-        </section>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
 
-        <!-- Menu Section -->
-        <section class="menu">
-            <h2>Pricing & Services Menu</h2>
-            <img src="menu.webp" alt="Menu" class="menu-image">
-        </section>
+    <!-- Hero Section with Background Image -->
+    <header class="hero">
+        <div class="hero-background" style="background-image: url('backround.webp')"></div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1 class="hero-title">Johnny's Barbershop</h1>
+            <p class="hero-subtitle">Classic Cuts & Professional Service Since 1995</p>
+            <div class="hero-buttons">
+                <a href="booking.html" class="btn btn-primary">Book An Appointment</a>
+                <a href="contact.html" class="btn btn-secondary">Get In Touch</a>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <span></span>
+        </div>
+    </header>
 
-        <!-- Contact Section -->
-        <section class="contact">
-            <h2>Get In Touch</h2>
-            <p><strong>📍 Address:</strong> 15 E Main St, Oyster Bay, NY 11771</p>
-            <p><strong>📞 Phone:</strong> (516) 802-5300</p>
-            
-            <h3>Hours of Operation</h3>
-            <p><strong>Monday - Friday:</strong> 9 AM - 6 PM</p>
-            <p><strong>Saturday:</strong> Closed</p>
-            <p><strong>Sunday:</strong> 9 AM - 4 PM</p>
-        </section>
-    </main>
-    <footer>
-        <p>&copy; 2026 Johnny's Barbershop | 15 E Main St, Oyster Bay, NY 11771 | (516) 802-5300</p>
-        <p>Classic cuts. Professional service. Old-school tradition.</p>
+    <!-- Quick Stats Section -->
+    <section class="stats-section">
+        <div class="stat-card">
+            <h3>30+</h3>
+            <p>Years Experience</p>
+        </div>
+        <div class="stat-card">
+            <h3>5000+</h3>
+            <p>Happy Customers</p>
+        </div>
+        <div class="stat-card">
+            <h3>4.9★</h3>
+            <p>Average Rating</p>
+        </div>
+        <div class="stat-card">
+            <h3>7</h3>
+            <p>Expert Barbers</p>
+        </div>
+    </section>
+
+    <!-- Featured Services -->
+    <section class="featured-services">
+        <div class="container">
+            <h2>Our Services</h2>
+            <p class="section-subtitle">Experience traditional barbering at its finest</p>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">✂</div>
+                    <h3>Haircut & Styling</h3>
+                    <p>Professional haircuts tailored to your style and face shape</p>
+                    <span class="price">$25-35</span>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🧔</div>
+                    <h3>Beard Trim</h3>
+                    <p>Expert beard grooming and shape maintenance</p>
+                    <span class="price">$15-25</span>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🪒</div>
+                    <h3>Classic Shave</h3>
+                    <p>Traditional straight razor shave with hot towel service</p>
+                    <span class="price">$20-30</span>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">✨</div>
+                    <h3>Hot Towel Service</h3>
+                    <p>Relaxing hot towel treatment for ultimate comfort</p>
+                    <span class="price">$5-10</span>
+                </div>
+            </div>
+            <div class="text-center">
+                <a href="services.html" class="btn btn-secondary">View All Services</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <div class="container">
+            <h2>What Our Customers Say</h2>
+            <p class="section-subtitle">Real reviews from real clients</p>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="stars">★★★★★</div>
+                    <p>"Steve is an excellent barber. Gives exceptional service and a really nice guy. Highly recommend."</p>
+                    <p class="testimonial-author">— Seann Sackett</p>
+                </div>
+                <div class="testimonial-card">
+                    <div class="stars">★★★★★</div>
+                    <p>"This is a perfect old school barber shop. Simon is a master of his craft, a real artist. Fair prices and great cuts."</p>
+                    <p class="testimonial-author">— Patrick Richardson</p>
+                </div>
+                <div class="testimonial-card">
+                    <div class="stars">★★★★★</div>
+                    <p>"Prompt and professional, Zach is knowledgeable and skilled. Glad doors kept open until posted closing time."</p>
+                    <p class="testimonial-author">— Hector The Great</p>
+                </div>
+                <div class="testimonial-card">
+                    <div class="stars">★★★★★</div>
+                    <p>"Simon is a gem. Such a terrific person who takes his time to do your hair right. Meticulous in every way."</p>
+                    <p class="testimonial-author">— Paul Deraval</p>
+                </div>
+                <div class="testimonial-card">
+                    <div class="stars">★★★★★</div>
+                    <p>"Simon is Number 1! An old school barber you don't find anymore. Focused, consistent, and truly talented."</p>
+                    <p class="testimonial-author">— Michael Anthony</p>
+                </div>
+                <div class="testimonial-card">
+                    <div class="stars">★★★★★</div>
+                    <p>"Love visiting Steve and Simon! Meticulous cuts, great atmosphere, and always fun chatting with them."</p>
+                    <p class="testimonial-author">— Scott Brekne</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>Ready For Your Next Haircut?</h2>
+            <p>Schedule an appointment with one of our expert barbers today</p>
+            <a href="booking.html" class="btn btn-primary">Book Now</a>
+        </div>
+    </section>
+
+    <!-- Contact Preview -->
+    <section class="contact-preview">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-item">
+                    <h3>📍 Location</h3>
+                    <p>15 E Main St<br>Oyster Bay, NY 11771</p>
+                </div>
+                <div class="contact-item">
+                    <h3>📞 Phone</h3>
+                    <p>(516) 802-5300</p>
+                </div>
+                <div class="contact-item">
+                    <h3>🕐 Hours</h3>
+                    <p>Mon-Fri: 9 AM - 6 PM<br>Sun: 9 AM - 4 PM</p>
+                </div>
+                <div class="contact-item">
+                    <h3>💬 Get Help</h3>
+                    <p><a href="contact.html">Contact us online</a></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Johnny's Barbershop</h4>
+                    <p>Classic cuts. Professional service. Old-school tradition.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Connect</h4>
+                    <p>Follow us on social media for updates and special offers</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Johnny's Barbershop. All rights reserved. | 15 E Main St, Oyster Bay, NY 11771</p>
+            </div>
+        </div>
     </footer>
+
+    <script src="main.js"></script>
 </body>
 </html>

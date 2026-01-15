@@ -19,11 +19,13 @@ function initNavigation() {
 
     if (hamburger) {
         hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
             navMenu.classList.toggle('active');
         });
 
         navLinks.forEach(link => {
             link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
                 navMenu.classList.remove('active');
             });
         });
@@ -31,6 +33,7 @@ function initNavigation() {
         // Close menu when clicking outside
         document.addEventListener('click', (e) => {
             if (!navMenu.contains(e.target) && !hamburger.contains(e.target)) {
+                hamburger.classList.remove('active');
                 navMenu.classList.remove('active');
             }
         });

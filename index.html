@@ -14,13 +14,13 @@
     <nav class="navbar">
         <div class="nav-container">
             <div class="logo">
-                <a href="index.html">✂ Johnny's Barbershop</a>
+                <a href="#home">✂ Johnny's Barbershop</a>
             </div>
             <ul class="nav-menu">
-                <li><a href="index.html" class="nav-link active">Home</a></li>
-                <li><a href="services.html" class="nav-link">Services</a></li>
-                <li><a href="about.html" class="nav-link">About</a></li>
-                <li><a href="contact.html" class="nav-link">Contact</a></li>
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#services" class="nav-link">Services</a></li>
+                <li><a href="#reviews" class="nav-link">Reviews</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
             </ul>
             <div class="hamburger">
                 <span></span>
@@ -30,127 +30,200 @@
         </div>
     </nav>
 
-    <!-- Hero Section with Background Image -->
-    <header class="hero">
+    <!-- Hero Section -->
+    <section id="home" class="hero">
         <div class="hero-background" style="background-image: url('background.webp')"></div>
         <div class="hero-overlay"></div>
         <div class="hero-content">
             <h1 class="hero-title">Johnny's Barbershop</h1>
             <p class="hero-subtitle">Classic Cuts & Professional Service Since 1995</p>
             <div class="hero-buttons">
-                <a href="contact.html" class="btn btn-primary">Get In Touch</a>
+                <a href="#services" class="btn btn-primary">Explore Services</a>
+                <a href="#contact" class="btn btn-secondary">Get In Touch</a>
             </div>
         </div>
         <div class="scroll-indicator">
             <span></span>
         </div>
-    </header>
+    </section>
 
-    <!-- Featured Services -->
-    <section class="featured-services">
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>About Johnny's</h2>
+                    <p>Since 1995, Johnny's Barbershop has been a cornerstone of the Oyster Bay community. We specialize in classic cuts and modern styles with a personal touch that keeps customers coming back.</p>
+                    <p>Our master barbers bring decades of combined experience and a passion for the art of barbering. Every customer is treated like family in our warm, professional environment.</p>
+                    <div class="about-stats">
+                        <div class="stat">
+                            <h3>30+</h3>
+                            <p>Years in Business</p>
+                        </div>
+                        <div class="stat">
+                            <h3>7</h3>
+                            <p>Expert Barbers</p>
+                        </div>
+                        <div class="stat">
+                            <h3>5000+</h3>
+                            <p>Happy Customers</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services-section">
         <div class="container">
             <h2>Our Services</h2>
-            <p class="section-subtitle">Experience traditional barbering at its finest</p>
+            <p class="section-subtitle">Expert barbering for every need</p>
             <div class="services-grid">
                 <div class="service-card">
                     <div class="service-icon">✂</div>
                     <h3>Haircut & Styling</h3>
-                    <p>Professional haircuts tailored to your style and face shape</p>
-                    <span class="price">$25-35</span>
+                    <p>Professional cuts tailored to your style. Classic fades to modern designs.</p>
+                    <div class="service-features">
+                        <span>✓ Consultation</span>
+                        <span>✓ Premium tools</span>
+                    </div>
+                    <p class="price">$25 - $35</p>
                 </div>
+
                 <div class="service-card">
                     <div class="service-icon">🧔</div>
                     <h3>Beard Trim</h3>
-                    <p>Expert beard grooming and shape maintenance</p>
-                    <span class="price">$15-25</span>
+                    <p>Expert beard grooming and shape maintenance. Precision trimming at its finest.</p>
+                    <div class="service-features">
+                        <span>✓ Shape & trim</span>
+                        <span>✓ Beard oil</span>
+                    </div>
+                    <p class="price">$15 - $25</p>
                 </div>
+
                 <div class="service-card">
                     <div class="service-icon">🪒</div>
-                    <h3>Classic Shave</h3>
-                    <p>Traditional straight razor shave with hot towel service</p>
-                    <span class="price">$20-30</span>
+                    <h3>Straight Razor Shave</h3>
+                    <p>Traditional luxury shave. Hot towel service with master barber technique.</p>
+                    <div class="service-features">
+                        <span>✓ Hot towel</span>
+                        <span>✓ Straight razor</span>
+                    </div>
+                    <p class="price">$20 - $30</p>
                 </div>
+
                 <div class="service-card">
                     <div class="service-icon">✨</div>
                     <h3>Hot Towel Service</h3>
-                    <p>Relaxing hot towel treatment for ultimate comfort</p>
-                    <span class="price">$5-10</span>
+                    <p>Relaxing treatment perfect with any service. Opens pores, softens hair.</p>
+                    <div class="service-features">
+                        <span>✓ Aromatherapy</span>
+                        <span>✓ Relaxation</span>
+                    </div>
+                    <p class="price">$5 - $10</p>
                 </div>
-            </div>
-            <div class="text-center">
-                <a href="services.html" class="btn btn-secondary">View All Services</a>
             </div>
         </div>
     </section>
 
-    <!-- Testimonials Section -->
-    <section class="testimonials">
+    <!-- Reviews Section -->
+    <section id="reviews" class="reviews-section">
         <div class="container">
-            <h2>What Our Customers Say</h2>
-            <p class="section-subtitle">Real reviews from real clients</p>
-            <div class="testimonials-grid">
-                <div class="testimonial-card">
+            <h2>Customer Reviews</h2>
+            <p class="section-subtitle">What our customers say</p>
+            <div class="reviews-grid">
+                <div class="review-card">
                     <div class="stars">★★★★★</div>
                     <p>"Steve is an excellent barber. Gives exceptional service and a really nice guy. Highly recommend."</p>
-                    <p class="testimonial-author">— Seann Sackett</p>
+                    <p class="author">— Seann Sackett</p>
                 </div>
-                <div class="testimonial-card">
+
+                <div class="review-card">
                     <div class="stars">★★★★★</div>
                     <p>"This is a perfect old school barber shop. Simon is a master of his craft, a real artist. Fair prices and great cuts."</p>
-                    <p class="testimonial-author">— Patrick Richardson</p>
+                    <p class="author">— Patrick Richardson</p>
                 </div>
-                <div class="testimonial-card">
+
+                <div class="review-card">
                     <div class="stars">★★★★★</div>
-                    <p>"Prompt and professional, Zach is knowledgeable and skilled. Glad doors kept open until posted closing time."</p>
-                    <p class="testimonial-author">— Hector The Great</p>
+                    <p>"Prompt and professional. Zach is knowledgeable and skilled. Best haircuts in town!"</p>
+                    <p class="author">— Hector The Great</p>
                 </div>
-                <div class="testimonial-card">
+
+                <div class="review-card">
                     <div class="stars">★★★★★</div>
-                    <p>"Simon is a gem. Such a terrific person who takes his time to do your hair right. Meticulous in every way."</p>
-                    <p class="testimonial-author">— Paul Deraval</p>
+                    <p>"Simon is a gem. Takes his time to do your hair right. Meticulous in every way and great conversations."</p>
+                    <p class="author">— Paul Deraval</p>
                 </div>
-                <div class="testimonial-card">
+
+                <div class="review-card">
                     <div class="stars">★★★★★</div>
                     <p>"Simon is Number 1! An old school barber you don't find anymore. Focused, consistent, and truly talented."</p>
-                    <p class="testimonial-author">— Michael Anthony</p>
+                    <p class="author">— Michael Anthony</p>
                 </div>
-                <div class="testimonial-card">
+
+                <div class="review-card">
                     <div class="stars">★★★★★</div>
                     <p>"Love visiting Steve and Simon! Meticulous cuts, great atmosphere, and always fun chatting with them."</p>
-                    <p class="testimonial-author">— Scott Brekne</p>
+                    <p class="author">— Scott Brekne</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- CTA Section -->
-    <section class="cta-section">
+    <!-- Why Choose Us -->
+    <section class="why-section">
         <div class="container">
-            <h2>Ready For Your Next Haircut?</h2>
-            <p>Schedule an appointment with one of our expert barbers today</p>
-            <a Visit us today for premium barbering services</p>
-            <a href="contact.html" class="btn btn-primary">Contact Us
+            <h2>Why Choose Johnny's?</h2>
+            <div class="why-grid">
+                <div class="why-card">
+                    <h3>🎯 Expert Barbers</h3>
+                    <p>Master craftsmen with decades of experience</p>
+                </div>
+                <div class="why-card">
+                    <h3>✨ Premium Quality</h3>
+                    <p>Finest tools and products for best results</p>
+                </div>
+                <div class="why-card">
+                    <h3>😌 Welcoming Vibe</h3>
+                    <p>Comfortable, friendly atmosphere</p>
+                </div>
+                <div class="why-card">
+                    <h3>💰 Fair Pricing</h3>
+                    <p>Transparent, honest pricing always</p>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <!-- Contact Preview -->
-    <section class="contact-preview">
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
         <div class="container">
-            <div class="contact-grid">
-                <div class="contact-item">
-                    <h3>📍 Location</h3>
-                    <p>15 E Main St<br>Oyster Bay, NY 11771</p>
-                </div>
-                <div class="contact-item">
-                    <h3>📞 Phone</h3>
-                    <p>(516) 802-5300</p>
-                </div>
-                <div class="contact-item">
-                    <h3>🕐 Hours</h3>
-                    <p>Mon-Fri: 9 AM - 6 PM<br>Sun: 9 AM - 4 PM</p>
-                </div>
-                <div class="contact-item">
-                    <h3>💬 Get Help</h3>
-                    <p><a href="contact.html">Contact us online</a></p>
+            <h2>Visit Us Today</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="info-block">
+                        <h3>📍 Location</h3>
+                        <p>15 E Main Street<br>Oyster Bay, NY 11771</p>
+                    </div>
+
+                    <div class="info-block">
+                        <h3>📞 Call Us</h3>
+                        <p><a href="tel:+15168025300">(516) 802-5300</a></p>
+                    </div>
+
+                    <div class="info-block">
+                        <h3>🕐 Hours</h3>
+                        <p><strong>Mon - Fri:</strong> 9 AM - 6 PM<br>
+                        <strong>Saturday:</strong> Closed<br>
+                        <strong>Sunday:</strong> 9 AM - 4 PM</p>
+                    </div>
+
+                    <div class="info-block">
+                        <h3>👥 Walk-Ins</h3>
+                        <p>Always welcome! No appointment needed.</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -167,19 +240,19 @@
                 <div class="footer-section">
                     <h4>Quick Links</h4>
                     <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="services.html">Services</a></li>
-                        <li><a href="about.html">About</a></li>
-                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#reviews">Reviews</a></li>
+                        <li><a href="#contact">Contact</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
                     <h4>Connect</h4>
-                    <p>Follow us on social media for updates and special offers</p>
+                    <p>15 E Main St, Oyster Bay, NY 11771<br>(516) 802-5300</p>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2026 Johnny's Barbershop. All rights reserved. | 15 E Main St, Oyster Bay, NY 11771</p>
+                <p>&copy; 2026 Johnny's Barbershop. All rights reserved.</p>
             </div>
         </div>
     </footer>

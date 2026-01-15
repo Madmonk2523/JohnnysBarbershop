@@ -1,22 +1,26 @@
 /* ================================
    ADVANCED JOHNNY'S BARBERSHOP CSS
-   Modern, Professional, Responsive
+   Single Page, Modern, Professional
    ================================ */
 
 /* Root Variables */
 :root {
-    --primary-color: #1a1a1a;
-    --secondary-color: #8b4513;
+    --primary-color: #0f0f0f;
+    --secondary-color: #a0522d;
     --accent-color: #d4a574;
-    --text-dark: #2c3e50;
-    --text-light: #7f8c8d;
-    --bg-light: #f5f5f5;
+    --accent-light: #e8c8a0;
+    --text-dark: #1a1a1a;
+    --text-light: #666666;
+    --bg-light: #f8f8f8;
+    --bg-lighter: #fafafa;
     --white: #ffffff;
-    --success: #27ae60;
+    --success: #2ecc71;
     --danger: #e74c3c;
-    --shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-    --shadow-lg: 0 20px 50px rgba(0, 0, 0, 0.3);
-    --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+    --shadow-md: 0 12px 40px rgba(0, 0, 0, 0.15);
+    --shadow-lg: 0 20px 60px rgba(0, 0, 0, 0.2);
+    --transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-fast: all 0.2s ease-out;
 }
 
 /* Reset & Base Styles */
@@ -31,11 +35,75 @@ html {
 }
 
 body {
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Raleway', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
     background-color: var(--white);
     color: var(--text-dark);
-    line-height: 1.6;
+    line-height: 1.7;
     overflow-x: hidden;
+    letter-spacing: 0.3px;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 15px;
+}
+
+h1 {
+    font-size: 3.5rem;
+}
+
+h2 {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+h3 {
+    font-size: 1.5rem;
+    color: var(--text-dark);
+}
+
+p {
+    font-size: 1rem;
+    color: var(--text-light);
+    line-height: 1.8;
+}
+
+a {
+    text-decoration: none;
+    color: var(--secondary-color);
+    transition: var(--transition);
+}
+
+/* Container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Reset & Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Raleway', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    background-color: var(--white);
+    color: var(--text-dark);
+    line-height: 1.7;
+    overflow-x: hidden;
+    letter-spacing: 0.3px;
 }
 
 /* Typography */
@@ -105,13 +173,17 @@ a {
 
 .logo a {
     font-family: 'Playfair Display', serif;
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     font-weight: 900;
     color: var(--white);
-    letter-spacing: 1px;
+    letter-spacing: 2px;
     text-transform: uppercase;
     transition: var(--transition);
-}
+    background: linear-gradient(135deg, var(--accent-color), var(--accent-light));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 0 30px rgba(212, 165, 116, 0.6);
+    filter: brightness(1.1
 
 .logo a:hover {
     color: var(--accent-color);
@@ -332,28 +404,55 @@ a {
     cursor: pointer;
     transition: var(--transition);
     border: 2px solid transparent;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(160, 82, 45, 0.25);
+}
+
+.btn::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.3);
+    transform: translate(-50%, -50%);
+    transition: width 0.5s ease, height 0.5s ease;
+    z-index: -1;
+}
+
+.btn:hover::before {
+    width: 300px;
+    height: 300px;
 }
 
 .btn-primary {
-    background: linear-gradient(135deg, var(--secondary-color), var(--accent-color));
+    background: linear-gradient(135deg, var(--secondary-color) 0%, #8b4513 100%);
     color: var(--white);
+    position: relative;
+    z-index: 1;
 }
 
 .btn-primary:hover {
     transform: translateY(-3px);
-    box-shadow: 0 15px 40px rgba(139, 69, 19, 0.4);
+    box-shadow: 0 15px 40px rgba(160, 82, 45, 0.5);
 }
 
 .btn-secondary {
     background: transparent;
     color: var(--white);
     border: 2px solid var(--accent-color);
+    position: relative;
+    z-index: 1;
 }
 
 .btn-secondary:hover {
     background: var(--accent-color);
-    color: var(--primary-color);
+    color: var(--secondary-color);
     transform: translateY(-3px);
+    box-shadow: 0 15px 40px rgba(212, 165, 116, 0.4);
 }
 
 .btn.full-width {
@@ -389,12 +488,12 @@ a {
 
 .service-card {
     background: var(--white);
-    padding: 40px 30px;
-    border-radius: 15px;
+    padding: 50px 35px;
+    border-radius: 20px;
     text-align: center;
     box-shadow: var(--shadow);
     transition: var(--transition);
-    border-top: 4px solid var(--secondary-color);
+    border-top: 5px solid var(--secondary-color);
     position: relative;
     overflow: hidden;
 }
@@ -406,9 +505,9 @@ a {
     left: -100%;
     width: 100%;
     height: 100%;
-    background: linear-gradient(135deg, var(--secondary-color), var(--accent-color));
-    opacity: 0.05;
+    background: linear-gradient(135deg, rgba(160, 82, 45, 0.08), rgba(212, 165, 116, 0.08));
     transition: var(--transition);
+    z-index: 1;
 }
 
 .service-card:hover::before {
@@ -416,15 +515,18 @@ a {
 }
 
 .service-card:hover {
-    transform: translateY(-10px);
+    transform: translateY(-15px);
     box-shadow: var(--shadow-lg);
+    border-top: 5px solid var(--accent-color);
 }
 
 .service-icon {
-    font-size: 3rem;
+    font-size: 3.5rem;
     margin-bottom: 20px;
     display: inline-block;
-    animation: float 3s ease-in-out infinite;
+    animation: float 4s ease-in-out infinite;
+    position: relative;
+    z-index: 2;
 }
 
 @keyframes float {
@@ -492,16 +594,30 @@ a {
 
 .testimonial-card {
     background: var(--white);
-    padding: 30px;
-    border-radius: 10px;
+    padding: 40px;
+    border-radius: 15px;
     box-shadow: var(--shadow);
     transition: var(--transition);
-    border-left: 4px solid var(--secondary-color);
+    border-left: 5px solid var(--secondary-color);
+    position: relative;
+    overflow: hidden;
+}
+
+.testimonial-card::before {
+    content: '"';
+    position: absolute;
+    top: 10px;
+    left: 15px;
+    font-size: 3rem;
+    color: var(--accent-color);
+    opacity: 0.2;
+    font-family: 'Playfair Display', serif;
 }
 
 .testimonial-card:hover {
-    transform: translateY(-5px);
-    box-shadow: var(--shadow-lg);
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-md);
+    border-left: 5px solid var(--accent-color);
 }
 
 .stars {
@@ -1124,24 +1240,47 @@ a {
 
 .contact-card {
     background: var(--white);
-    padding: 40px 30px;
-    border-radius: 15px;
+    padding: 50px 35px;
+    border-radius: 18px;
     text-align: center;
     box-shadow: var(--shadow);
-    border-top: 4px solid var(--secondary-color);
+    border-top: 5px solid var(--secondary-color);
+    transition: var(--transition);
+    position: relative;
+    overflow: hidden;
+}
+
+.contact-card::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -50%;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(212, 165, 116, 0.1), transparent);
     transition: var(--transition);
 }
 
 .contact-card:hover {
-    transform: translateY(-5px);
+    transform: translateY(-10px);
     box-shadow: var(--shadow-lg);
-    border-top: 4px solid var(--accent-color);
+    border-top: 5px solid var(--accent-color);
+}
+
+.contact-card:hover::before {
+    top: -30%;
+    right: -30%;
 }
 
 .contact-card h3 {
     color: var(--secondary-color);
     margin-bottom: 15px;
+    position: relative;
+    z-index: 1;
+    font-size: 1.4rem;
 }
+    position: relative;
+    z-index: 1;
 
 .contact-card p {
     line-height: 1.8;

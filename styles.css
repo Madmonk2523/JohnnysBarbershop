@@ -801,6 +801,12 @@ p { font-size: 1rem; color: var(--gray-text); line-height: 1.8; }
         margin-top: 50px;
     }
     
+    .hero-background {
+        background-attachment: scroll;
+        background-size: cover;
+        background-position: center center;
+    }
+    
     .hero-title {
         font-size: 1.8rem;
     }
@@ -2252,4 +2258,4 @@ a {
         max-width: 450px;
     }
 }
-}
+

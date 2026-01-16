@@ -799,12 +799,14 @@ p { font-size: 1rem; color: var(--gray-text); line-height: 1.8; }
     
     .hero {
         margin-top: 50px;
+        height: 70vh;
     }
     
     .hero-background {
-        background-attachment: scroll;
-        background-size: cover;
-        background-position: center center;
+        background-attachment: scroll !important;
+        background-size: contain !important;
+        background-position: center center !important;
+        background-repeat: no-repeat !important;
     }
     
     .hero-title {

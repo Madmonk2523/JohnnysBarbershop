@@ -1576,7 +1576,7 @@ a {
    FOOTER
    ================================ */
 .footer {
-    background: var(--primary-color);
+    background: linear-gradient(180deg, #151515 0%, #0e0e0e 100%);
     color: var(--white);
     padding: 60px 20px 20px;
 }
@@ -1589,13 +1589,15 @@ a {
 }
 
 .footer-section h4 {
-    color: var(--accent-color);
+    color: #f2d3ad;
     margin-bottom: 15px;
     font-size: 1.2rem;
+    letter-spacing: 0.4px;
 }
 
 .footer-section p {
-    color: #bbb;
+    color: #f1f1f1;
+    font-size: 1.02rem;
     line-height: 1.8;
 }
 
@@ -1608,19 +1610,23 @@ a {
 }
 
 .footer-section a {
-    color: #bbb;
+    color: #ffffff;
+    font-weight: 600;
+    text-decoration: underline;
+    text-decoration-color: rgba(242, 211, 173, 0.65);
+    text-underline-offset: 4px;
     transition: var(--transition);
 }
 
 .footer-section a:hover {
-    color: var(--accent-color);
+    color: #f2d3ad;
 }
 
 .footer-bottom {
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-top: 1px solid rgba(255, 255, 255, 0.22);
     padding-top: 20px;
     text-align: center;
-    color: #999;
+    color: #e0e0e0;
     font-size: 0.9rem;
 }
 
@@ -2324,6 +2330,27 @@ a {
     .menu-image {
         width: 95%;
         max-width: 450px;
+    }
+
+    .footer {
+        padding: 40px 16px 18px;
+    }
+
+    .footer-content {
+        gap: 24px;
+        margin-bottom: 24px;
+    }
+
+    .footer-section h4 {
+        font-size: 1.1rem;
+        margin-bottom: 10px;
+    }
+
+    .footer-section p,
+    .footer-section a,
+    .footer-bottom {
+        font-size: 0.95rem;
+        line-height: 1.7;
     }
 }
 

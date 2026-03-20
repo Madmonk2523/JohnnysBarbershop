@@ -738,7 +738,7 @@ p { font-size: 1rem; color: var(--gray-text); line-height: 1.8; }
     
     .hamburger.active span:nth-child(1) {
         transform: rotate(45deg) translate(8px, 8px);
-        background: var(--accent);
+        background: var(--white);
     }
     
     .hamburger.active span:nth-child(2) {
@@ -747,7 +747,7 @@ p { font-size: 1rem; color: var(--gray-text); line-height: 1.8; }
     
     .hamburger.active span:nth-child(3) {
         transform: rotate(-45deg) translate(7px, -7px);
-        background: var(--accent);
+        background: var(--white);
     }
     
     .nav-menu {
@@ -792,7 +792,7 @@ p { font-size: 1rem; color: var(--gray-text); line-height: 1.8; }
         top: 0;
         height: 100%;
         width: 4px;
-        background: var(--accent);
+        background: var(--white);
         transform: translateX(-100%);
         transition: transform 0.3s ease;
     }
@@ -809,7 +809,7 @@ p { font-size: 1rem; color: var(--gray-text); line-height: 1.8; }
     
     .nav-link.active {
         background: rgba(212,165,116,0.15);
-        color: var(--accent);
+        color: var(--white);
     }
     
     .nav-link:last-child {
@@ -1036,7 +1036,7 @@ a {
     font-family: 'Playfair Display', serif;
     font-size: 1.8rem;
     font-weight: 700;
-    color: var(--accent-color);
+    color: var(--white);
     display: flex;
     align-items: center;
     gap: 8px;
@@ -1044,8 +1044,8 @@ a {
 }
 
 .logo a:hover {
-    color: var(--accent-light);
-    text-shadow: 0 0 15px rgba(212, 165, 116, 0.5);
+    color: var(--white);
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.35);
 }
 
 .nav-menu {
@@ -1068,8 +1068,13 @@ a {
     left: 0;
     width: 0;
     height: 2px;
-    background: var(--secondary-color);
+    background: var(--white);
     transition: var(--transition);
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: var(--white);
 }
 
 .nav-link:hover::after,

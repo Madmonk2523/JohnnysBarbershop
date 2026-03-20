@@ -1609,6 +1609,11 @@ a {
     margin-bottom: 10px;
 }
 
+.footer-section ul li a,
+.footer-section ul li a:visited {
+    color: #ffffff;
+}
+
 .footer-section a {
     color: #ffffff;
     font-weight: 600;
